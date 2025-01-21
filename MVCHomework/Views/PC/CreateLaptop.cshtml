@@ -1,0 +1,48 @@
+﻿
+@model BuiltPC
+@{
+	ViewData["Title"] = "Create a Laptop";
+}
+
+<h2>Build a Laptop</h2>
+
+<form method="post">
+	<label asp-for="Title"></label>
+	<input asp-for="Title" />
+	<span asp-validation-for="Title"></span>
+	<br />
+	<br />
+
+	<label asp-for="Type"></label>
+	<select asp-for="Type">
+		<option value="Gaming">Gaming</option>
+		<option value="TravelWork">"Travel(Work)</option>
+		<option value="TravelLeisure">Travel(Leisure)</option>
+	</select>
+	<span asp-validation-for="Type"></span>
+	<br />
+	<br />
+
+	<label asp-for="Budget"></label>
+	<input asp-for="Budget" />
+	<span asp-validation-for="Budget"></span>
+	<br />
+	<br />
+
+	<label asp-for="CPU"></label>
+	<select asp-for="CPU">
+		<option value="AMD">AMD</option>
+		<option value="Intel">Intel</option>
+	</select>
+	<span asp-validation-for="CPU"></span>
+	<br />
+	<br />
+
+	<label asp-for="GPU"></label>
+	<input asp-for="GPU" />
+	<span asp-validation-for="GPU"></span>
+	<br />
+	<br />
+
+	<input type="submit" value="Build"/>
+</form>
