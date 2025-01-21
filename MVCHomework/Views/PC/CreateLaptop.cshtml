@@ -16,7 +16,7 @@
 	<label asp-for="Type"></label>
 	<select asp-for="Type">
 		<option value="Gaming">Gaming</option>
-		<option value="TravelWork">"Travel(Work)</option>
+		<option value="TravelWork">Travel(Work)</option>
 		<option value="TravelLeisure">Travel(Leisure)</option>
 	</select>
 	<span asp-validation-for="Type"></span>
@@ -46,3 +46,7 @@
 
 	<input type="submit" value="Build"/>
 </form>
+
+	@section Scripts{
+		<partial name="_ValidationScriptsPartial"/>
+	}

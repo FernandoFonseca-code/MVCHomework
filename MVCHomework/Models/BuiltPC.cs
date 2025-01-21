@@ -1,4 +1,6 @@
-﻿namespace MVCHomework.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace MVCHomework.Models
 {
     /// <summary>
     /// Represents a user built PC item
@@ -8,6 +10,8 @@
         /// <summary>
         /// Represents the title of the users build
         /// </summary>
+        [Required(ErrorMessage = "Please enter a title")]
+        [Display(Name = "Build Title")]
         public string Title { get; set; }
 
         /// <summary>  
@@ -25,6 +29,8 @@
         /// <summary>
         /// User inputted budget
         /// </summary>
+
+        [DataType(DataType.Currency)]
         public double Budget { get; set; }
 
 

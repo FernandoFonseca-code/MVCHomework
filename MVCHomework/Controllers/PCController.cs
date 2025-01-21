@@ -41,5 +41,23 @@ namespace MVCHomework.Controllers
         {
             return View();
         }
+        [HttpPost]
+        public IActionResult CreateLaptop(BuiltPC newBuild)
+        {
+            if (ModelState.IsValid)
+            {
+                // Add to database
+                // BuiltPCDb.Add(newBuild);
+                // Add modal dialog box confirming information
+                // Message.Show("Build Created", "Your build has been created successfully", "success");
+                // Return a view
+                return RedirectToAction("Index", "Home");
+            }
+            // If the ModelState is not valid
+            // show the user the same web page, with validation
+            // errors
+
+            return View(newBuild);
+        }
     }
 }
